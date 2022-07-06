@@ -9,7 +9,7 @@
     <option key="#DeviceCommand#" value="R7FA6E10F"/>
     <option key="#RTOS#" value="_none"/>
     <option key="#pinconfiguration#" value="R7FA2A1AB3CFM.pincfg"/>
-    <option key="#FSPVersion#" value="3.7.0"/>
+    <option key="#FSPVersion#" value="3.8.0"/>
     <option key="#ConfigurationFragments#" value="Renesas##BSP##Board##ra6e1_voice##"/>
     <option key="#SELECTED_TOOLCHAIN#" value="gcc-arm-embedded"/>
     <option key="#ToolchainVersion#" value="10.3.1.20210824"/>
@@ -54,8 +54,8 @@
       <configSetting altId="adc0.an000.p000" configurationId="adc0.an000"/>
       <configSetting altId="adc0.an001.p001" configurationId="adc0.an001"/>
       <configSetting altId="dac120.da0.p014" configurationId="dac120.da0"/>
-      <configSetting altId="gpt1.gtioc1a.p105" configurationId="gpt1.gtioc1a"/>
-      <configSetting altId="gpt4.gtioc4b.p301" configurationId="gpt4.gtioc4b"/>
+      <configSetting altId="gpt1.gtioc1a.p105" configurationId="gpt1.gtioc1a" isUsedByDriver="true"/>
+      <configSetting altId="gpt4.gtioc4b.p301" configurationId="gpt4.gtioc4b" isUsedByDriver="true"/>
       <configSetting altId="gpt6.gtioc6a.p400" configurationId="gpt6.gtioc6a"/>
       <configSetting altId="jtag_fslash_swd.swclk.p300" configurationId="jtag_fslash_swd.swclk"/>
       <configSetting altId="jtag_fslash_swd.swdio.p108" configurationId="jtag_fslash_swd.swdio"/>
@@ -71,10 +71,10 @@
       <configSetting altId="sci3.txd3.p409" configurationId="sci3.txd3"/>
       <configSetting altId="sci4.rxd4.p206" configurationId="sci4.rxd4"/>
       <configSetting altId="sci4.txd4.p207" configurationId="sci4.txd4"/>
-      <configSetting altId="spi0.miso0.p110" configurationId="spi0.miso0"/>
-      <configSetting altId="spi0.mosi0.p109" configurationId="spi0.mosi0"/>
-      <configSetting altId="spi0.rspck0.p111" configurationId="spi0.rspck0"/>
-      <configSetting altId="spi0.ssla0.p205" configurationId="spi0.ssla0"/>
+      <configSetting altId="spi0.miso0.p110" configurationId="spi0.miso0" isUsedByDriver="true"/>
+      <configSetting altId="spi0.mosi0.p109" configurationId="spi0.mosi0" isUsedByDriver="true"/>
+      <configSetting altId="spi0.rspck0.p111" configurationId="spi0.rspck0" isUsedByDriver="true"/>
+      <configSetting altId="spi0.ssla0.p205" configurationId="spi0.ssla0" isUsedByDriver="true"/>
       <configSetting altId="spi1.miso1.p100" configurationId="spi1.miso1"/>
       <configSetting altId="spi1.mosi1.p101" configurationId="spi1.mosi1"/>
       <configSetting altId="spi1.rspck1.p102" configurationId="spi1.rspck1"/>

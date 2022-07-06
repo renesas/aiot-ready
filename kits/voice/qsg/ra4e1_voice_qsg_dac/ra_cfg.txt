@@ -93,20 +93,20 @@ FSP Configuration
       P013 40 - - - - Disabled - - "ADC0: AN011" - None - - 
       P014 39 - - - - Disabled - - "ADC0: AN012; DAC120: DA0" PLAYBACK O - - 
       P015 38 - - - - Disabled - - "ADC0: AN013; ICU: IRQ13" - None - - 
-      P100 36 - - L None Disabled - - "AGT0: AGTIO0; GPT5: GTIOC5B; GPT_POEGA: GTETRGA; ICU: IRQ2; QSPI: QSPCLK; SCI0: RXD0" "QSPI_CLK / SCI0_RXD0" IO - - 
-      P101 35 - - L None Disabled - - "AGT0: AGTEE0; GPT5: GTIOC5A; GPT_POEGB: GTETRGB; ICU: IRQ1; QSPI: QIO1; SCI0: TXD0" "QSPI_DQ1 / SCI0_TXD0" IO - - 
-      P102 34 - - L - Disabled - - "ADC0: ADTRG0; AGT0: AGTO0; CAN0: CRX0; GPT2: GTIOC2B; QSPI: QIO0; SCI0: SCK0" "QSPI_DQ0 / SCI0_SCK0" IO - - 
-      P103 33 - - - - Disabled - - "AGT2: AGTIO2; CAN0: CTX0; GPT2: GTIOC2A; QSPI: QIO3; SCI0: CTS_RTS0" "P103 / SCI0_CTS_RTS0" None - - 
-      P104 32 - - L None Disabled - - "AGT2: AGTEE2; GPT1: GTIOC1B; GPT_POEGB: GTETRGB; ICU: IRQ1; QSPI: QIO2" "SCKO (as I2S_CLK)" IO - - 
+      P100 36 - - - - Disabled - - "AGT0: AGTIO0; GPT5: GTIOC5B; GPT_POEGA: GTETRGA; ICU: IRQ2; SCI0: RXD0" "QSPI_CLK / SCI0_RXD0" None - - 
+      P101 35 - - - - Disabled - - "AGT0: AGTEE0; GPT5: GTIOC5A; GPT_POEGB: GTETRGB; ICU: IRQ1; SCI0: TXD0" "QSPI_DQ1 / SCI0_TXD0" None - - 
+      P102 34 - - - - Disabled - - "ADC0: ADTRG0; AGT0: AGTO0; CAN0: CRX0; GPT2: GTIOC2B; SCI0: SCK0" "QSPI_DQ0 / SCI0_SCK0" None - - 
+      P103 33 - - - - Disabled - - "AGT2: AGTIO2; CAN0: CTX0; GPT2: GTIOC2A; SCI0: CTS_RTS0" "P103 / SCI0_CTS_RTS0" None - - 
+      P104 32 - - - None Disabled - - "AGT2: AGTEE2; GPT1: GTIOC1B; GPT_POEGB: GTETRGB; ICU: IRQ1" "SCKO (as I2S_CLK)" IO - - 
       P108 25 JTAG/SWD_TMS - L - "Peripheral mode" - - "AGT3: AGTOA3; JTAG/SWD: SWDIO; JTAG/SWD: TMS; SCI9: CTS_RTS9; SPI0: SSLA0" SWD_SWDIO IO - - 
       P109 26 JTAG/SWD_TDO - L - "Peripheral mode" - - "AGT3: AGTOB3; CGC: CLKOUT; GPT1: GTIOC1A; JTAG/SWD: TDO; JTAG/SWD: TRACESWO; SCI9: TXD9; SPI0: MOSI0" "SPI0_MOSI, TXD9" IO - - 
       P110 27 JTAG/SWD_TDI - L None "Peripheral mode" - - "AGT3: AGTEE3; GPT1: GTIOC1B; ICU: IRQ3; JTAG/SWD: TDI; SCI9: RXD9; SPI0: MISO0" "(SPI0_MISO), RXD9" IO - - 
       P111 28 - - L None Disabled - - "AGT5: AGTOA5; ICU: IRQ4; SCI9: SCK9; SPI0: RSPCK0" "SPI0_SCK (as SCKI)" IO - - 
-      P112 29 - - L - Disabled - - "AGT5: AGTOB5; QSPI: QSSL; SPI0: SSLA0" SPI0_SSL IO - - 
+      P112 29 - - - - Disabled - - "AGT5: AGTOB5; SPI0: SSLA0" SPI0_SSL IO - - 
       P200 21 - - - - Disabled - - "ICU: NMI" - None - - 
       P201 20 - - - - Disabled - - "SYSTEM: MD" "PMOD IO1" None - - 
       P206 18 - - - - Disabled - - "ICU: IRQ0-DS; SCI4: RXD4; SCI9: CTS9; USB FS: USB_VBUSEN" "PMOD IO2" None - - 
-      P207 17 - - L - Disabled - - "QSPI: QSSL; SCI4: TXD4" QSPI_CS IO - - 
+      P207 17 - - - - Disabled - - "SCI4: TXD4" QSPI_CS None - - 
       P212 8 - - L None Disabled - - "AGT1: AGTEE1; CGC: EXTAL; GPT_POEGD: GTETRGD; ICU: IRQ3" LED2 IO - - 
       P213 7 - - L None Disabled - - "AGT2: AGTEE2; CGC: XTAL; GPT_POEGC: GTETRGC; ICU: IRQ2" LED3 IO - - 
       P300 24 JTAG/SWD_TCK - L - "Peripheral mode" - - "JTAG/SWD: SWCLK; JTAG/SWD: TCK; SPI0: SSLA1" SWD_SWCLK IO - - 
@@ -116,7 +116,7 @@ FSP Configuration
       P407 12 - - L - Disabled - - "ADC0: ADTRG0; AGT0: AGTIO0; IIC0: SDA0; RTC: RTCOUT; SCI4: CTS_RTS4; USB FS: USB_VBUS" "USB VBUS" IO - - 
       P408 11 - - L None Disabled - - "AGT2: AGTOB2; ICU: IRQ7; IIC0: SCL0; SCI3: RXD3; SCI4: CTS4" VCOM_TXD I - - 
       P409 10 - - L None Disabled - - "AGT2: AGTOA2; ICU: IRQ6; SCI3: TXD3" VCOM_RXD O - - 
-      P500 37 - - L - Disabled - - "ADC0: AN016; AGT0: AGTOA0; CAC: CACREF; QSPI: QSPCLK; USB FS: USB_VBUSEN" LED1 IO - - 
+      P500 37 - - - - Disabled - - "ADC0: AN016; AGT0: AGTOA0; CAC: CACREF; USB FS: USB_VBUSEN" LED1 IO - - 
       RES 19 SYSTEM_RES - - - - - - - - IO "Read only" - 
       USB_DM 14 SYSTEM_USB_DM - - - - - - - - IO "Read only" - 
       USB_DP 15 SYSTEM_USB_DP - - - - - - - - IO "Read only" - 
@@ -142,20 +142,20 @@ FSP Configuration
       P013 40 - - - - Disabled - - "ADC0: AN011" - None - - 
       P014 39 DAC120_DA0 - - - "Analog mode" - - "ADC0: AN012; DAC120: DA0" PLAYBACK O - - 
       P015 38 - - - - Disabled - - "ADC0: AN013; ICU: IRQ13" - None - - 
-      P100 36 SCI0_RXD0 - L None "Peripheral mode" - - "AGT0: AGTIO0; GPT5: GTIOC5B; GPT_POEGA: GTETRGA; ICU: IRQ2; QSPI: QSPCLK; SCI0: RXD0" "QSPI_CLK / SCI0_RXD0" IO - - 
-      P101 35 SCI0_TXD0 - L None "Peripheral mode" - - "AGT0: AGTEE0; GPT5: GTIOC5A; GPT_POEGB: GTETRGB; ICU: IRQ1; QSPI: QIO1; SCI0: TXD0" "QSPI_DQ1 / SCI0_TXD0" IO - - 
-      P102 34 SCI0_SCK0 - L - "Peripheral mode" - - "ADC0: ADTRG0; AGT0: AGTO0; CAN0: CRX0; GPT2: GTIOC2B; QSPI: QIO0; SCI0: SCK0" "QSPI_DQ0 / SCI0_SCK0" IO - - 
-      P103 33 SCI0_CTS_RTS0 - - - "Peripheral mode" - - "AGT2: AGTIO2; CAN0: CTX0; GPT2: GTIOC2A; QSPI: QIO3; SCI0: CTS_RTS0" "P103 / SCI0_CTS_RTS0" None - - 
-      P104 32 GPT1_GTIOC1B - L None "Peripheral mode" - - "AGT2: AGTEE2; GPT1: GTIOC1B; GPT_POEGB: GTETRGB; ICU: IRQ1; QSPI: QIO2" "SCKO (as I2S_CLK)" IO - - 
+      P100 36 SCI0_RXD0 - - - "Peripheral mode" - - "AGT0: AGTIO0; GPT5: GTIOC5B; GPT_POEGA: GTETRGA; ICU: IRQ2; SCI0: RXD0" "QSPI_CLK / SCI0_RXD0" None - - 
+      P101 35 SCI0_TXD0 - - - "Peripheral mode" - - "AGT0: AGTEE0; GPT5: GTIOC5A; GPT_POEGB: GTETRGB; ICU: IRQ1; SCI0: TXD0" "QSPI_DQ1 / SCI0_TXD0" None - - 
+      P102 34 SCI0_SCK0 - - - "Peripheral mode" - - "ADC0: ADTRG0; AGT0: AGTO0; CAN0: CRX0; GPT2: GTIOC2B; SCI0: SCK0" "QSPI_DQ0 / SCI0_SCK0" None - - 
+      P103 33 SCI0_CTS_RTS0 - - - "Peripheral mode" - - "AGT2: AGTIO2; CAN0: CTX0; GPT2: GTIOC2A; SCI0: CTS_RTS0" "P103 / SCI0_CTS_RTS0" None - - 
+      P104 32 GPT1_GTIOC1B - - None "Peripheral mode" - - "AGT2: AGTEE2; GPT1: GTIOC1B; GPT_POEGB: GTETRGB; ICU: IRQ1" "SCKO (as I2S_CLK)" IO - - 
       P108 25 JTAG/SWD_SWDIO - L - "Peripheral mode" - - "AGT3: AGTOA3; JTAG/SWD: SWDIO; JTAG/SWD: TMS; SCI9: CTS_RTS9; SPI0: SSLA0" SWD_SWDIO IO - - 
       P109 26 SPI0_MOSI0 - M - "Peripheral mode" - - "AGT3: AGTOB3; CGC: CLKOUT; GPT1: GTIOC1A; JTAG/SWD: TDO; JTAG/SWD: TRACESWO; SCI9: TXD9; SPI0: MOSI0" "SPI0_MOSI, TXD9" IO - - 
       P110 27 SPI0_MISO0 - M None "Peripheral mode" - - "AGT3: AGTEE3; GPT1: GTIOC1B; ICU: IRQ3; JTAG/SWD: TDI; SCI9: RXD9; SPI0: MISO0" "(SPI0_MISO), RXD9" IO - - 
       P111 28 SPI0_RSPCK0 - L None "Peripheral mode" - - "AGT5: AGTOA5; ICU: IRQ4; SCI9: SCK9; SPI0: RSPCK0" "SPI0_SCK (as SCKI)" IO - - 
-      P112 29 GPIO - L - "Output mode (Initial High)" - - "AGT5: AGTOB5; QSPI: QSSL; SPI0: SSLA0" SPI0_SSL IO - - 
+      P112 29 GPIO - - - "Output mode (Initial High)" - - "AGT5: AGTOB5; SPI0: SSLA0" SPI0_SSL IO - - 
       P200 21 - - - - Disabled - - "ICU: NMI" - None - - 
       P201 20 GPIO - - - "Input mode" - - "SYSTEM: MD" "PMOD IO1" None - - 
       P206 18 GPIO - - - "Input mode" - - "ICU: IRQ0-DS; SCI4: RXD4; SCI9: CTS9; USB FS: USB_VBUSEN" "PMOD IO2" None - - 
-      P207 17 GPIO - L - "Output mode (Initial High)" - - "QSPI: QSSL; SCI4: TXD4" QSPI_CS IO - - 
+      P207 17 GPIO - - - "Output mode (Initial High)" - - "SCI4: TXD4" QSPI_CS None - - 
       P212 8 GPIO - L None "Output mode (Initial High)" - - "AGT1: AGTEE1; CGC: EXTAL; GPT_POEGD: GTETRGD; ICU: IRQ3" LED2 IO - - 
       P213 7 GPIO - L None "Output mode (Initial High)" - - "AGT2: AGTEE2; CGC: XTAL; GPT_POEGC: GTETRGC; ICU: IRQ2" LED3 IO - - 
       P300 24 JTAG/SWD_SWCLK - L - "Peripheral mode" - - "JTAG/SWD: SWCLK; JTAG/SWD: TCK; SPI0: SSLA1" SWD_SWCLK IO - - 
@@ -165,7 +165,7 @@ FSP Configuration
       P407 12 "USB FS_USB_VBUS" - L - "Peripheral mode" - - "ADC0: ADTRG0; AGT0: AGTIO0; IIC0: SDA0; RTC: RTCOUT; SCI4: CTS_RTS4; USB FS: USB_VBUS" "USB VBUS" IO - - 
       P408 11 SCI3_RXD3 - L None "Peripheral mode" - - "AGT2: AGTOB2; ICU: IRQ7; IIC0: SCL0; SCI3: RXD3; SCI4: CTS4" VCOM_TXD I - - 
       P409 10 SCI3_TXD3 - L None "Peripheral mode" - - "AGT2: AGTOA2; ICU: IRQ6; SCI3: TXD3" VCOM_RXD O - - 
-      P500 37 GPIO - L - "Output mode (Initial High)" - - "ADC0: AN016; AGT0: AGTOA0; CAC: CACREF; QSPI: QSPCLK; USB FS: USB_VBUSEN" LED1 IO - - 
+      P500 37 GPIO - - - "Output mode (Initial High)" - - "ADC0: AN016; AGT0: AGTOA0; CAC: CACREF; USB FS: USB_VBUSEN" LED1 IO - - 
       RES 19 SYSTEM_RES - - - - - - - - IO "Read only" - 
       USB_DM 14 SYSTEM_USB_DM - - - - - - - - IO "Read only" - 
       USB_DP 15 SYSTEM_USB_DP - - - - - - - - IO "Read only" - 
@@ -191,20 +191,20 @@ FSP Configuration
       P013 40 - - - - Disabled - - "ADC0: AN011" - None - - 
       P014 39 DAC120_DA0 - - - "Analog mode" - - "ADC0: AN012; DAC120: DA0" PLAYBACK O - - 
       P015 38 - - - - Disabled - - "ADC0: AN013; ICU: IRQ13" - None - - 
-      P100 36 QSPI_QSPCLK - L None "Peripheral mode" - - "AGT0: AGTIO0; GPT5: GTIOC5B; GPT_POEGA: GTETRGA; ICU: IRQ2; QSPI: QSPCLK; SCI0: RXD0" "QSPI_CLK / SCI0_RXD0" IO - - 
-      P101 35 QSPI_QIO1 - L None "Peripheral mode" - - "AGT0: AGTEE0; GPT5: GTIOC5A; GPT_POEGB: GTETRGB; ICU: IRQ1; QSPI: QIO1; SCI0: TXD0" "QSPI_DQ1 / SCI0_TXD0" IO - - 
-      P102 34 QSPI_QIO0 - L - "Peripheral mode" - - "ADC0: ADTRG0; AGT0: AGTO0; CAN0: CRX0; GPT2: GTIOC2B; QSPI: QIO0; SCI0: SCK0" "QSPI_DQ0 / SCI0_SCK0" IO - - 
-      P103 33 - - - - Disabled - - "AGT2: AGTIO2; CAN0: CTX0; GPT2: GTIOC2A; QSPI: QIO3; SCI0: CTS_RTS0" "P103 / SCI0_CTS_RTS0" None - - 
-      P104 32 GPT1_GTIOC1B - L None "Peripheral mode" - - "AGT2: AGTEE2; GPT1: GTIOC1B; GPT_POEGB: GTETRGB; ICU: IRQ1; QSPI: QIO2" "SCKO (as I2S_CLK)" IO - - 
+      P100 36 - - - - Disabled - - "AGT0: AGTIO0; GPT5: GTIOC5B; GPT_POEGA: GTETRGA; ICU: IRQ2; SCI0: RXD0" "QSPI_CLK / SCI0_RXD0" None - - 
+      P101 35 - - - - Disabled - - "AGT0: AGTEE0; GPT5: GTIOC5A; GPT_POEGB: GTETRGB; ICU: IRQ1; SCI0: TXD0" "QSPI_DQ1 / SCI0_TXD0" None - - 
+      P102 34 - - - - Disabled - - "ADC0: ADTRG0; AGT0: AGTO0; CAN0: CRX0; GPT2: GTIOC2B; SCI0: SCK0" "QSPI_DQ0 / SCI0_SCK0" None - - 
+      P103 33 - - - - Disabled - - "AGT2: AGTIO2; CAN0: CTX0; GPT2: GTIOC2A; SCI0: CTS_RTS0" "P103 / SCI0_CTS_RTS0" None - - 
+      P104 32 GPT1_GTIOC1B - - None "Peripheral mode" - - "AGT2: AGTEE2; GPT1: GTIOC1B; GPT_POEGB: GTETRGB; ICU: IRQ1" "SCKO (as I2S_CLK)" IO - - 
       P108 25 JTAG/SWD_SWDIO - L - "Peripheral mode" - - "AGT3: AGTOA3; JTAG/SWD: SWDIO; JTAG/SWD: TMS; SCI9: CTS_RTS9; SPI0: SSLA0" SWD_SWDIO IO - - 
       P109 26 SPI0_MOSI0 - M - "Peripheral mode" - - "AGT3: AGTOB3; CGC: CLKOUT; GPT1: GTIOC1A; JTAG/SWD: TDO; JTAG/SWD: TRACESWO; SCI9: TXD9; SPI0: MOSI0" "SPI0_MOSI, TXD9" IO - - 
       P110 27 SPI0_MISO0 - M None "Peripheral mode" - - "AGT3: AGTEE3; GPT1: GTIOC1B; ICU: IRQ3; JTAG/SWD: TDI; SCI9: RXD9; SPI0: MISO0" "(SPI0_MISO), RXD9" IO - - 
       P111 28 SPI0_RSPCK0 - L None "Peripheral mode" - - "AGT5: AGTOA5; ICU: IRQ4; SCI9: SCK9; SPI0: RSPCK0" "SPI0_SCK (as SCKI)" IO - - 
-      P112 29 SPI0_SSLA0 - M - "Peripheral mode" - - "AGT5: AGTOB5; QSPI: QSSL; SPI0: SSLA0" SPI0_SSL IO - - 
+      P112 29 SPI0_SSLA0 - - - "Peripheral mode" - - "AGT5: AGTOB5; SPI0: SSLA0" SPI0_SSL IO - - 
       P200 21 - - - - Disabled - - "ICU: NMI" - None - - 
       P201 20 - - - - Disabled - - "SYSTEM: MD" "PMOD IO1" None - - 
       P206 18 - - - - Disabled - - "ICU: IRQ0-DS; SCI4: RXD4; SCI9: CTS9; USB FS: USB_VBUSEN" "PMOD IO2" None - - 
-      P207 17 QSPI_QSSL - L - "Peripheral mode" - - "QSPI: QSSL; SCI4: TXD4" QSPI_CS IO - - 
+      P207 17 - - - - Disabled - - "SCI4: TXD4" QSPI_CS None - - 
       P212 8 GPIO - L None "Output mode (Initial High)" - - "AGT1: AGTEE1; CGC: EXTAL; GPT_POEGD: GTETRGD; ICU: IRQ3" LED2 IO - - 
       P213 7 GPIO - L None "Output mode (Initial High)" - - "AGT2: AGTEE2; CGC: XTAL; GPT_POEGC: GTETRGC; ICU: IRQ2" LED3 IO - - 
       P300 24 JTAG/SWD_SWCLK - L - "Peripheral mode" - - "JTAG/SWD: SWCLK; JTAG/SWD: TCK; SPI0: SSLA1" SWD_SWCLK IO - - 
@@ -214,7 +214,7 @@ FSP Configuration
       P407 12 "USB FS_USB_VBUS" - L - "Peripheral mode" - - "ADC0: ADTRG0; AGT0: AGTIO0; IIC0: SDA0; RTC: RTCOUT; SCI4: CTS_RTS4; USB FS: USB_VBUS" "USB VBUS" IO - - 
       P408 11 SCI3_RXD3 - L None "Peripheral mode" - - "AGT2: AGTOB2; ICU: IRQ7; IIC0: SCL0; SCI3: RXD3; SCI4: CTS4" VCOM_TXD I - - 
       P409 10 SCI3_TXD3 - L None "Peripheral mode" - - "AGT2: AGTOA2; ICU: IRQ6; SCI3: TXD3" VCOM_RXD O - - 
-      P500 37 GPIO - L - "Output mode (Initial High)" - - "ADC0: AN016; AGT0: AGTOA0; CAC: CACREF; QSPI: QSPCLK; USB FS: USB_VBUSEN" LED1 IO - - 
+      P500 37 GPIO - - - "Output mode (Initial High)" - - "ADC0: AN016; AGT0: AGTOA0; CAC: CACREF; USB FS: USB_VBUSEN" LED1 IO - - 
       RES 19 SYSTEM_RES - - - - - - - - IO "Read only" - 
       USB_DM 14 SYSTEM_USB_DM - - - - - - - - IO "Read only" - 
       USB_DP 15 SYSTEM_USB_DP - - - - - - - - IO "Read only" - 

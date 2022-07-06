@@ -239,16 +239,20 @@ FSP Configuration
   Module "I/O Port (r_ioport)"
     Parameter Checking: Default (BSP)
     
-  Module "UART (r_sci_uart)"
+  Module "Timer, General PWM (r_gpt)"
     Parameter Checking: Default (BSP)
-    FIFO Support: Enable
-    DTC Support: Enable
-    Flow Control Support: Disable
-    RS-485 Support: Disable
+    Pin Output Support: Disabled
+    Write Protect Enable: Disabled
+    Clock Source: PCLKD
     
-  Module "Transfer (r_dtc)"
+  Module "ADC (r_adc)"
     Parameter Checking: Default (BSP)
-    Linker section to keep DTC vector table: .fsp_dtc_vector_table
+    
+  Module "Transfer (r_dmac)"
+    Parameter Checking: Default (BSP)
+    
+  Module "Event Link Controller (r_elc)"
+    Parameter Checking: Default (BSP)
     
   HAL
     Instance "g_ioport I/O Port (r_ioport)"
@@ -263,43 +267,111 @@ FSP Configuration
       Port E ELC Trigger Source: Disabled
       Pin Configuration Name: g_bsp_pin_cfg
       
-    Instance "g_uart0 UART (r_sci_uart)"
-      General: Name: g_uart0
-      General: Channel: 3
-      General: Data Bits: 8bits
-      General: Parity: None
-      General: Stop Bits: 1bit
-      Baud: Baud Rate: 115200
-      Baud: Baud Rate Modulation: Disabled
-      Baud: Max Error (%): 5
-      Flow Control: CTS/RTS Selection: Hardware RTS
-      Flow Control: Software RTS Port: Disabled
-      Flow Control: Software RTS Pin: Disabled
-      Extra: Clock Source: Internal Clock
-      Extra: Start bit detection: Falling Edge
-      Extra: Noise Filter: Disable
-      Extra: Receive FIFO Trigger Level: One
-      Extra: RS-485: DE Pin: Disable
-      Extra: RS-485: DE Pin Polarity: Active High
-      Extra: RS-485: DE Port Number: Disabled
-      Extra: RS-485: DE Pin Number: Disabled
-      Interrupts: Callback: g_uart0_cb
-      Interrupts: Receive Interrupt Priority: Priority 12
-      Interrupts: Transmit Data Empty Interrupt Priority: Priority 12
-      Interrupts: Transmit End Interrupt Priority: Priority 12
-      Interrupts: Error Interrupt Priority: Priority 12
+    Instance "g_timer0 Timer, General PWM (r_gpt)"
+      General: Name: g_timer0
+      General: Channel: 2
+      General: Mode: Periodic
+      General: Period: 16000
+      General: Period Unit: Hertz
+      Output: Custom Waveform: GTIOA: Initial Output Level: Pin Level Low
+      Output: Custom Waveform: GTIOA: Cycle End Output Level: Pin Level Retain
+      Output: Custom Waveform: GTIOA: Compare Match Output Level: Pin Level Retain
+      Output: Custom Waveform: GTIOA: Retain Output Level at Count Stop: Disabled
+      Output: Custom Waveform: GTIOB: Initial Output Level: Pin Level Low
+      Output: Custom Waveform: GTIOB: Cycle End Output Level: Pin Level Retain
+      Output: Custom Waveform: GTIOB: Compare Match Output Level: Pin Level Retain
+      Output: Custom Waveform: GTIOB: Retain Output Level at Count Stop: Disabled
+      Output: Custom Waveform: Custom Waveform Enable: Disabled
+      Output: Duty Cycle Percent (only applicable in PWM mode): 50
+      Output: GTIOCA Output Enabled: False
+      Output: GTIOCA Stop Level: Pin Level Low
+      Output: GTIOCB Output Enabled: False
+      Output: GTIOCB Stop Level: Pin Level Low
+      Input: Count Up Source: 
+      Input: Count Down Source: 
+      Input: Start Source: 
+      Input: Stop Source: 
+      Input: Clear Source: 
+      Input: Capture A Source: 
+      Input: Capture B Source: 
+      Input: Noise Filter A Sampling Clock Select: No Filter
+      Input: Noise Filter B Sampling Clock Select: No Filter
+      Interrupts: Callback: NULL
+      Interrupts: Overflow/Crest Interrupt Priority: Disabled
+      Interrupts: Capture A Interrupt Priority: Disabled
+      Interrupts: Capture B Interrupt Priority: Disabled
+      Interrupts: Underflow/Trough Interrupt Priority: Disabled
+      Extra Features: Extra Features: Disabled
+      Extra Features: Output Disable: POEG Link: POEG Channel 0
+      Extra Features: Output Disable: Output Disable POEG Trigger: 
+      Extra Features: ADC Trigger: Start Event Trigger (Channels with GTINTAD only): 
+      Extra Features: Dead Time: Dead Time Count Up (Raw Counts): 0
+      Extra Features: Dead Time: Dead Time Count Down (Raw Counts) (Channels with GTDVD only): 0
+      Extra Features: ADC Trigger (Channels with GTADTRA only): ADC A Compare Match (Raw Counts): 0
+      Extra Features: ADC Trigger (Channels with GTADTRB only): ADC B Compare Match (Raw Counts): 0
+      Extra Features: Interrupt Skipping (Channels with GTITC only): Interrupt to Count: None
+      Extra Features: Interrupt Skipping (Channels with GTITC only): Interrupt Skip Count: 0
+      Extra Features: Interrupt Skipping (Channels with GTITC only): Skip ADC Events: None
+      Extra Features: Output Disable: GTIOCA Disable Setting: Disable Prohibited
+      Extra Features: Output Disable: GTIOCB Disable Setting: Disable Prohibited
       
-      Instance "g_transfer0 Transfer (r_dtc) SCI3 TXI (Transmit data empty)"
-        Name: g_transfer0
-        Mode: Normal
-        Transfer Size: 1 Byte
-        Destination Address Mode: Fixed
-        Source Address Mode: Incremented
-        Repeat Area (Unused in Normal Mode): Source
-        Destination Pointer: NULL
-        Source Pointer: NULL
-        Interrupt Frequency: After all transfers have completed
-        Number of Transfers: 0
-        Number of Blocks (Valid only in Block Mode): 0
-        Activation Source: SCI3 TXI (Transmit data empty)
-        
+    Instance "g_adc0 ADC (r_adc)"
+      General: Name: g_adc0
+      General: Unit: 0
+      General: Resolution: 12-Bit
+      General: Alignment: Right
+      General: Clear after read: On
+      General: Mode: Single Scan
+      General: Double-trigger: Disabled
+      Input: Channel Scan Mask (channel availability varies by MCU): Channel 0, Channel 1
+      Input: Group B Scan Mask (channel availability varies by MCU): 
+      Interrupts: Normal/Group A Trigger: GPT2 COUNTER OVERFLOW (Overflow)
+      Interrupts: Group B Trigger: Disabled
+      Interrupts: Group Priority (Valid only in Group Scan Mode): Group A cannot interrupt Group B
+      Input: Add/Average Count: Disabled
+      Input: Reference Voltage control: VREFH0/VREFH
+      Input: Addition/Averaging Mask (channel availability varies by MCU and unit): 
+      Input: Sample and Hold: Sample and Hold Channels (Available only on selected MCUs): 
+      Input: Sample and Hold: Sample Hold States (Applies only to channels 0, 1, 2): 24
+      Input: Window Compare: Window Mode: Disabled
+      Input: Window Compare: Event Output: OR
+      Input: Window Compare: Window A: Enable: Disabled
+      Input: Window Compare: Window A: Channels to compare (channel availability varies by MCU and unit): 
+      Input: Window Compare: Window A: Channel comparison mode (channel availability varies by MCU and unit): 
+      Input: Window Compare: Window A: Lower Reference: 0
+      Input: Window Compare: Window A: Upper Reference: 0
+      Input: Window Compare: Window B: Enable: Disabled
+      Input: Window Compare: Window B: Channel to compare (channel availability varies by MCU and unit): Channel 0
+      Input: Window Compare: Window B: Comparison mode: Less Than or Outside Window
+      Input: Window Compare: Window B: Lower Reference: 0
+      Input: Window Compare: Window B: Upper Reference: 0
+      Interrupts: Callback: NULL
+      Interrupts: Scan End Interrupt Priority: Disabled
+      Interrupts: Scan End Group B Interrupt Priority: Disabled
+      Interrupts: Window Compare A Interrupt Priority: Disabled
+      Interrupts: Window Compare B Interrupt Priority: Disabled
+      Extra: ADC Ring Buffer: Disabled
+      
+    Instance "g_transfer0 Transfer (r_dmac) ADC0 SCAN END (A/D scan end interrupt)"
+      Name: g_transfer0
+      Channel: 0
+      Mode: Normal
+      Transfer Size: 4 Bytes
+      Destination Address Mode: Incremented
+      Source Address Mode: Fixed
+      Repeat Area (Unused in Normal Mode): Source
+      Destination Pointer: NULL
+      Source Pointer: NULL
+      Number of Transfers: 1
+      Number of Blocks (Valid only in Repeat,Block or Repeat-Block Mode): 0
+      Activation Source: ADC0 SCAN END (A/D scan end interrupt)
+      Callback: g_transfer0_cb
+      Context: NULL
+      Transfer End Interrupt Priority: Priority 11
+      Interrupt Frequency: Interrupt after all transfers have completed
+      Offset value (Valid only when address mode is \'Offset\'): 1
+      Source Buffer Size: 1
+      
+    Instance "g_elc Event Link Controller (r_elc)"
+      Name: g_elc
+      
