@@ -241,7 +241,7 @@ FSP Configuration
     
   Module "SPI (r_spi)"
     Parameter Checking: Default (BSP)
-    Enable Support for using DTC: Enabled
+    Enable Support for using a transfer API: Enabled
     Enable Transmitting from RXI Interrupt: Disabled
     
   Module "Transfer (r_dtc)"
