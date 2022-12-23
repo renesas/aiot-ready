@@ -417,10 +417,10 @@
 	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
 	<storageModule moduleId="refreshScope" versionNumber="2">
 		<configuration configurationName="Debug">
-			<resource resourceType="PROJECT" workspacePath="/RA2L1_VOICE_qsg_dac_4_0_0"/>
+			<resource resourceType="PROJECT" workspacePath="/RA2L1_VOICE_qsg_dac_4_2_0"/>
 		</configuration>
 		<configuration configurationName="Release">
-			<resource resourceType="PROJECT" workspacePath="/RA2L1_VOICE_qsg_dac_4_0_0"/>
+			<resource resourceType="PROJECT" workspacePath="/RA2L1_VOICE_qsg_dac_4_2_0"/>
 		</configuration>
 	</storageModule>
 	<storageModule moduleId="org.eclipse.cdt.make.core.buildtargets"/>

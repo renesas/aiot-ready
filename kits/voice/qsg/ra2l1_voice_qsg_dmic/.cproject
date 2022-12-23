@@ -420,9 +420,11 @@
 	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
 	<storageModule moduleId="refreshScope" versionNumber="2">
 		<configuration configurationName="Debug">
+			<resource resourceType="PROJECT" workspacePath="/RA2L1_VOICE_qsg_dmic_4_2_0"/>
 			<resource resourceType="PROJECT" workspacePath="/RA2l1_VOICE_qsg_dmic_4_0_0"/>
 		</configuration>
 		<configuration configurationName="Release">
+			<resource resourceType="PROJECT" workspacePath="/RA2L1_VOICE_qsg_dmic_4_2_0"/>
 			<resource resourceType="PROJECT" workspacePath="/RA2l1_VOICE_qsg_dmic_4_0_0"/>
 		</configuration>
 	</storageModule>
